@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="cooperativa.listado_campanya_tree">
+            <field name="name">Listado de campanya</field>
+            <field name="model">cooperativa.campanya_model</field>
+            <field name="arch" type="xml">
+              <tree>
+                
+                <field name="fecha"/>
+                <field name="campanya"/>
+                <field name="cantidad"/>
+             
+                
+              </tree>
+            </field>
+          </record>
+
+          <record model="ir.ui.view" id="cooperativa.listado_campanya_form">
+            <field name="name">Formulario de campanya</field>
+            <field name="model">cooperativa.campanya_model</field>
+            <field name="arch" type="xml">
+              <form>
+                <sheet>       
+                  
+                <group >
+                  <field name="campanya"/>
+                <field name="fecha"/>
+                <field name="socio_id"/>
+                <field name="producto_id"/>
+                <field name="cantidad"/>
+                    
+ 
+
+                </group>
+            </sheet>
+              </form>
+            </field>
+          </record>
+
+
+
+<record model="ir.actions.act_window" id="cooperativa.action_window_campanya">
+    <field name="name">Listado de campanya</field>
+    <field name="res_model">cooperativa.campanya_model</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+
+
+
+</data>
+</odoo>
